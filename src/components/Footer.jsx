@@ -144,7 +144,7 @@ export default function Footer() {
             className="flex items-center gap-2 hover:opacity-70 transition-opacity"
             style={{ fontFamily: 'DM Sans', fontSize: 13, color: '#9A8A72', textDecoration: 'none' }}
           >
-            <Instagram size={13} color="#C8A96E" />
+            <span style={{ color: '#C8A96E' }}><InstagramIcon size={13} /></span>
             @clinica.cipriano
           </a>
         </div>
