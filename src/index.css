@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Outfit:wght@200;300;400;500&family=DM+Sans:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #C8A96E;
+  --color-gold-bright: #E8C97A;
+  --color-gold-soft: #A88B5A;
+  --color-night: #080C14;
+  --color-night-mid: #0D1421;
+  --color-card-dark: #131C2E;
+  --color-cream: #F8F5F0;
+  --color-cream-alt: #F2EEE8;
+  --color-ivory: #EDE8E0;
+  --color-muted-gold: #9A8A72;
+  --color-rose: #D4A5A0;
+  --color-footer: #04060B;
+
+  --font-display: 'Cormorant Garamond', serif;
+  --font-sub: 'Outfit', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  background-color: #080C14;
+  color: #EDE8E0;
+  overflow-x: hidden;
+}
+
+@media (pointer: fine) {
+  *, *::before, *::after { cursor: none !important; }
+}
+
+#root { width: 100%; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #080C14; }
+::-webkit-scrollbar-thumb { background: #C8A96E; border-radius: 2px; }
+
+/* Grain texture overlay */
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(13, 20, 33, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(200, 169, 110, 0.15);
+  box-shadow: 0 20px 60px rgba(200, 169, 110, 0.08);
+}
+
+/* Gold line animation */
+@keyframes goldGrow {
+  from { width: 0; }
+  to { width: 60px; }
+}
+
+/* Float animation for particles */
+@keyframes float1 {
+  0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.4; }
+  50% { transform: translateY(-20px) translateX(10px); opacity: 0.8; }
+}
+@keyframes float2 {
+  0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+  50% { transform: translateY(-30px) translateX(-15px); opacity: 0.6; }
+}
+@keyframes float3 {
+  0%, 100% { transform: translateY(0px) translateX(0px); opacity: 0.5; }
+  50% { transform: translateY(-15px) translateX(20px); opacity: 0.9; }
+}
+
+/* Marquee animation */
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-inner {
+  animation: marqueeScroll 25s linear infinite;
+}
+.marquee-inner:hover {
+  animation-play-state: paused;
+}
+
+/* Scroll indicator */
+@keyframes scrollLine {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+/* Pulsing gold */
+@keyframes goldPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(200,169,110,0.3); }
+  50% { box-shadow: 0 0 40px rgba(200,169,110,0.7), 0 0 80px rgba(200,169,110,0.3); }
+}
+
+/* WhatsApp float pulse */
+@keyframes waPulse {
+  0%, 100% { transform: scale(1); box-shadow: 0 8px 32px rgba(200,169,110,0.4); }
+  50% { transform: scale(1.08); box-shadow: 0 12px 48px rgba(200,169,110,0.6); }
+}
+
+.wa-float {
+  animation: waPulse 2s ease-in-out infinite;
+}
+
+/* Char reveal */
+.char-span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(8px);
+  animation: charReveal 0.4s forwards ease-out;
+}
+
+@keyframes charReveal {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Treatment card hover line */
+.card-line {
+  width: 0;
+  height: 1px;
+  background: #C8A96E;
+  transition: width 0.3s ease;
+}
+.group:hover .card-line { width: 40px; }
+
+/* Float label */
+.float-label-group { position: relative; }
+.float-label-group input,
+.float-label-group select,
+.float-label-group textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(200,169,110,0.3);
+  outline: none;
+  width: 100%;
+  padding: 20px 0 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16px;
+  color: #EDE8E0;
+  transition: border-color 0.3s;
+}
+.float-label-group input:focus,
+.float-label-group select:focus,
+.float-label-group textarea:focus {
+  border-bottom-color: #C8A96E;
+  box-shadow: 0 1px 0 #C8A96E;
+}
+.float-label-group label {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  color: #9A8A72;
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+.float-label-group input:focus + label,
+.float-label-group input:not(:placeholder-shown) + label,
+.float-label-group select:focus + label,
+.float-label-group textarea:focus + label,
+.float-label-group textarea:not(:placeholder-shown) + label {
+  top: 2px;
+  font-size: 11px;
+  color: #C8A96E;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.float-label-group select option { background: #0D1421; color: #EDE8E0; }
