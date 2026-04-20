@@ -279,3 +279,9 @@ body {
   color: #9A8A72;
 }
 .body-text-dark { color: #6B7A8D; }
+
+/* ── REVEAL ANIMATION ── */
+.revealed {
+  opacity: 1 !important;
+  transform: none !important;
+}

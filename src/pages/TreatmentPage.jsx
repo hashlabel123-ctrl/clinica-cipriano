@@ -56,7 +56,7 @@ export default function TreatmentPage({ name, label, description, image, fullTex
       >
         {image && (
           <div className="absolute inset-0">
-            <img src={image} alt={name} crossOrigin="anonymous" className="w-full h-full object-cover opacity-25" />
+            <img src={image} alt={name} className="w-full h-full object-cover opacity-25" />
             <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, #080C14 30%, rgba(8,12,20,0.6) 100%)' }} />
           </div>
         )}
@@ -113,7 +113,7 @@ export default function TreatmentPage({ name, label, description, image, fullTex
               <img
                 src={image}
                 alt={name}
-                crossOrigin="anonymous"
+               
                 className="w-full rounded-sm"
                 style={{ border: '1px solid rgba(200,169,110,0.2)' }}
               />

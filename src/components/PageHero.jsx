@@ -13,7 +13,7 @@ export default function PageHero({ label, title, titleGold, subtitle, image }) {
     >
       {image && (
         <div className="absolute inset-0">
-          <img src={image} alt="" crossOrigin="anonymous" className="w-full h-full object-cover opacity-30" />
+          <img src={image} alt="" className="w-full h-full object-cover opacity-30" />
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(8,12,20,0.7) 0%, rgba(8,12,20,0.9) 100%)' }} />
         </div>
       )}

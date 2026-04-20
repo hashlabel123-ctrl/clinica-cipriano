@@ -38,7 +38,7 @@ export default function TreatmentCard({ num, title, description, image, to, grad
         <img
           src={image}
           alt={title}
-          crossOrigin="anonymous"
+         
           className="w-full h-48 object-cover rounded-sm"
           style={{ filter: 'grayscale(30%)', transition: 'filter 0.3s' }}
           onMouseEnter={e => e.target.style.filter = 'grayscale(0%)'}

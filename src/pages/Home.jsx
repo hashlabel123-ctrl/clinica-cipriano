@@ -93,8 +93,8 @@ function TCard({ t, index }) {
               <img
                 src={t.img}
                 alt={t.title}
-                crossOrigin="anonymous"
                 className="card-img"
+                onError={e => { e.currentTarget.style.display = 'none' }}
                 style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
               />
             ) : (
@@ -184,16 +184,6 @@ function Testimonials() {
 
 /* ─── HOME ──────────────────────────────────── */
 export default function Home() {
-  // Inject reveal CSS once
-  useEffect(() => {
-    const id = 'reveal-css'
-    if (!document.getElementById(id)) {
-      const s = document.createElement('style')
-      s.id = id
-      s.textContent = globalRevealCSS
-      document.head.appendChild(s)
-    }
-  }, [])
 
   const heroRef = useRef(null)
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ['start start', 'end start'] })
@@ -452,7 +442,7 @@ export default function Home() {
                 border: '6px solid #fff',
               }}>
                 <img src="https://images.unsplash.com/photo-1588776814546-1ffbb172d4bc?auto=format&fit=crop&w=900&q=85"
-                  crossOrigin="anonymous" alt="Reabilitação"
+                  alt="Reabilitação"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               </div>
               <div style={{
@@ -463,7 +453,7 @@ export default function Home() {
                 border: '6px solid #fff',
               }}>
                 <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e85?auto=format&fit=crop&w=900&q=85"
-                  crossOrigin="anonymous" alt="Facetas"
+                  alt="Facetas"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               </div>
               <div style={{
@@ -475,7 +465,7 @@ export default function Home() {
                 border: '6px solid #fff',
               }}>
                 <img src="https://images.unsplash.com/photo-1598256985030-4fd7dffb9e65?auto=format&fit=crop&w=900&q=85"
-                  crossOrigin="anonymous" alt="Lentes"
+                  alt="Lentes"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               </div>
               {/* Gold accent */}
