@@ -6,7 +6,7 @@ export default function Facetas() {
       name="Facetas de Resina"
       label="ESTÉTICA DENTAL"
       description="Transformação completa do sorriso em uma única sessão. Dentes perfeitamente alinhados, brancos e naturais."
-      image="https://images.unsplash.com/photo-1606811841689-23dfddce3e85?auto=format&fit=crop&w=900&q=85"
+      image="/images/facetas.jpg"
       fullText={[
         'As facetas de resina são lâminas ultrafinas de resina composta aplicadas diretamente sobre a superfície dos dentes, corrigindo imperfeições de cor, forma, tamanho e posicionamento em uma única sessão clínica.',
         'Diferente das facetas de porcelana, as facetas de resina são realizadas em uma única visita, com resultado imediato e custo mais acessível. Com a técnica correta e materiais de alto padrão, o resultado é extremamente natural e esteticamente impecável.',

@@ -29,7 +29,7 @@ export default function Implante() {
       name="Implantes Dentários"
       label="IMPLANTODONTIA"
       description="A solução mais definitiva e natural para substituir dentes perdidos. Tecnologia de ponta com resultados que duram uma vida inteira."
-      image="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=85"
+      image="/images/implante.jpg"
       fullText={[
         'O implante dentário é um parafuso de titânio biocompatível que é inserido no osso da mandíbula ou maxila, funcionando como a raiz de um dente artificial. Sobre ele é fixada uma coroa que imita com perfeição a aparência e a função de um dente natural.',
         'Na Clínica Cipriano, utilizamos os melhores sistemas de implantes disponíveis no mercado, com planejamento digital 3D para máxima precisão e segurança. Realizamos desde implantes unitários até reabilitações totais (All-on-4 e All-on-6), devolvendo ao paciente a função mastigatória e a estética que merece.',

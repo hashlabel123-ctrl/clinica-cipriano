@@ -56,7 +56,7 @@ export default function Harmonizacao() {
       name="Harmonização Orofacial"
       label="ESTÉTICA FACIAL"
       description="A arte de equilibrar beleza, juventude e funcionalidade através de procedimentos minimamente invasivos."
-      image="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=85"
+      image="/images/harmonizacao.jpg"
       fullText={[
         'A Harmonização Orofacial é uma especialidade da odontologia que utiliza técnicas minimamente invasivas para equilibrar as proporções do rosto, realçar traços naturais e combater os sinais do envelhecimento.',
         'Na Clínica Cipriano, cada plano de tratamento é individualizado, considerando as características únicas do rosto, o estilo de vida e os objetivos de cada paciente. Utilizamos apenas produtos aprovados pela ANVISA, de marcas líderes mundiais.',

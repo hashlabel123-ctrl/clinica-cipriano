@@ -13,14 +13,14 @@ const CREAM = '#F8F5F0'
 const CARD = '#0D1421'
 
 const TREATMENTS = [
-  { n: '01', title: 'Implantes Dentários', desc: 'Solução definitiva para dentes perdidos. Do unitário à reabilitação total.', img: null, to: '/tratamentos/implante' },
-  { n: '02', title: 'Facetas de Resina', desc: 'Dentes perfeitamente alinhados e brancos. Transformação em uma sessão.', img: null, to: '/tratamentos/facetas' },
-  { n: '03', title: 'Harmonização Orofacial', desc: 'Equilíbrio estético do sorriso e da face. Arte e ciência em perfeita harmonia.', img: null, to: '/tratamentos/harmonizacao' },
-  { n: '04', title: 'Clareamento Dental', desc: 'O sorriso mais branco da sua vida. Tecnologia e segurança sem igual.', img: null, to: '/tratamentos/clareamento' },
-  { n: '05', title: 'Reabilitação Oral', desc: 'Restauração completa da estética e função bucal. Seu novo sorriso começa aqui.', img: null, to: '/tratamentos/reabilitacao' },
-  { n: '06', title: 'Lentes de Contato Dental', desc: 'Ultrafinas e naturais. A perfeição estética que você sempre sonhou.', img: null, to: '/tratamentos/lentes' },
-  { n: '07', title: 'Clínica Geral', desc: 'Prevenção, diagnóstico e cuidado completo para toda a família.', img: null, to: '/tratamentos/clinica-geral' },
-  { n: '08', title: 'Harmonização Facial', desc: '8 procedimentos estéticos para rejuvenescer, harmonizar e realçar sua beleza.', img: null, to: '/tratamentos/harmonizacao' },
+  { n: '01', title: 'Implantes Dentários', desc: 'Solução definitiva para dentes perdidos. Do unitário à reabilitação total.', img: '/images/implante.jpg', to: '/tratamentos/implante' },
+  { n: '02', title: 'Facetas de Resina', desc: 'Dentes perfeitamente alinhados e brancos. Transformação em uma sessão.', img: '/images/facetas.jpg', to: '/tratamentos/facetas' },
+  { n: '03', title: 'Harmonização Orofacial', desc: 'Equilíbrio estético do sorriso e da face. Arte e ciência em perfeita harmonia.', img: '/images/harmonizacao.jpg', to: '/tratamentos/harmonizacao' },
+  { n: '04', title: 'Clareamento Dental', desc: 'O sorriso mais branco da sua vida. Tecnologia e segurança sem igual.', img: '/images/clareamento.jpg', to: '/tratamentos/clareamento' },
+  { n: '05', title: 'Reabilitação Oral', desc: 'Restauração completa da estética e função bucal. Seu novo sorriso começa aqui.', img: '/images/reabilitacao.jpg', to: '/tratamentos/reabilitacao' },
+  { n: '06', title: 'Lentes de Contato Dental', desc: 'Ultrafinas e naturais. A perfeição estética que você sempre sonhou.', img: '/images/lentes.jpg', to: '/tratamentos/lentes' },
+  { n: '07', title: 'Clínica Geral', desc: 'Prevenção, diagnóstico e cuidado completo para toda a família.', img: '/images/clinica.jpg', to: '/tratamentos/clinica-geral' },
+  { n: '08', title: 'Harmonização Facial', desc: '8 procedimentos estéticos para rejuvenescer, harmonizar e realçar sua beleza.', img: '/images/facial.jpg', to: '/tratamentos/harmonizacao' },
 ]
 
 const STATS = [
@@ -441,7 +441,7 @@ export default function Home() {
                 boxShadow: '0 24px 64px rgba(0,0,0,0.2)',
                 border: '6px solid #fff',
               }}>
-                <div style={{ width: '100%', height: '100%', background: 'linear-gradient(135deg, #0D1421 0%, #1A3050 60%, rgba(200,169,110,0.2) 100%)' }} />
+                <img src="/images/reabilitacao.jpg" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               </div>
               <div style={{
                 position: 'absolute', top: '15%', left: '50%', transform: 'translateX(-50%)',
@@ -450,7 +450,7 @@ export default function Home() {
                 boxShadow: '0 24px 64px rgba(0,0,0,0.25)',
                 border: '6px solid #fff',
               }}>
-                <div style={{ width: '100%', height: '100%', background: 'linear-gradient(135deg, #111827 0%, #1C3A5E 60%, rgba(200,169,110,0.18) 100%)' }} />
+                <img src="/images/facetas.jpg" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               </div>
               <div style={{
                 position: 'absolute', top: 0, left: 0,
@@ -460,7 +460,7 @@ export default function Home() {
                 boxShadow: '0 24px 64px rgba(0,0,0,0.2)',
                 border: '6px solid #fff',
               }}>
-                <div style={{ width: '100%', height: '100%', background: 'linear-gradient(135deg, #0A1628 0%, #162845 60%, rgba(200,169,110,0.25) 100%)' }} />
+                <img src="/images/lentes.jpg" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               </div>
               {/* Gold accent */}
               <div style={{
