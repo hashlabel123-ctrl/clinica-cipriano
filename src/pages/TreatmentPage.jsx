@@ -54,7 +54,7 @@ export default function TreatmentPage({ name, label, description, image, fullTex
   return (
     <div>
       {/* Hero */}
-      <section style={{ minHeight: '65vh', background: NIGHT, position: 'relative', display: 'flex', alignItems: 'flex-end', overflow: 'hidden' }}>
+      <section style={{ minHeight: '65vh', background: NIGHT, position: 'relative', overflow: 'hidden' }}>
         {image && (
           <div style={{ position: 'absolute', inset: 0 }}>
             <img
@@ -66,7 +66,7 @@ export default function TreatmentPage({ name, label, description, image, fullTex
             <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, #080C14 30%, rgba(8,12,20,0.6) 100%)' }} />
           </div>
         )}
-        <div style={{ position: 'relative', zIndex: 10, maxWidth: 900, padding: '160px 64px 80px', width: '100%' }}>
+        <div style={{ position: 'relative', zIndex: 10, paddingTop: 180, paddingBottom: 80, paddingLeft: 64, paddingRight: 64 }}>
           <motion.p
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
