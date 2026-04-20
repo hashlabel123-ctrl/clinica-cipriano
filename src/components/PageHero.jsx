@@ -2,23 +2,28 @@ import { motion } from 'framer-motion'
 
 export default function PageHero({ label, title, titleGold, subtitle, image }) {
   return (
-    <section
-      className="relative flex items-center justify-center grain"
-      style={{
-        minHeight: '55vh',
-        background: image
-          ? 'transparent'
-          : '#080C14',
-      }}
-    >
+    <section style={{
+      minHeight: '55vh',
+      background: '#080C14',
+      position: 'relative',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      overflow: 'hidden',
+    }}>
       {image && (
-        <div className="absolute inset-0">
-          <img src={image} alt="" className="w-full h-full object-cover opacity-30" />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(8,12,20,0.7) 0%, rgba(8,12,20,0.9) 100%)' }} />
+        <div style={{ position: 'absolute', inset: 0 }}>
+          <img
+            src={image}
+            alt=""
+            onError={e => { e.currentTarget.style.display = 'none' }}
+            style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.3, display: 'block' }}
+          />
+          <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(8,12,20,0.7) 0%, rgba(8,12,20,0.9) 100%)' }} />
         </div>
       )}
 
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto py-32">
+      <div style={{ position: 'relative', zIndex: 10, textAlign: 'center', padding: '120px 48px 80px', maxWidth: 800, margin: '0 auto' }}>
         {label && (
           <motion.p
             initial={{ opacity: 0, y: 10 }}
@@ -55,8 +60,7 @@ export default function PageHero({ label, title, titleGold, subtitle, image }) {
           initial={{ width: 0 }}
           animate={{ width: 60 }}
           transition={{ duration: 0.8, delay: 0.7 }}
-          className="mx-auto mt-8 h-px"
-          style={{ background: '#C8A96E' }}
+          style={{ background: '#C8A96E', height: 1, margin: '32px auto 0' }}
         />
       </div>
     </section>
