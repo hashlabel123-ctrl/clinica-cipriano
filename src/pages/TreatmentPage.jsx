@@ -31,10 +31,10 @@ function FAQItem({ question, answer }) {
 }
 
 const RELATED_TREATMENTS = [
-  { num: 1, title: 'Implantes Dentários', desc: 'Solução definitiva para dentes perdidos.', img: 'https://odontologiacipriano.com.br/wp-content/uploads/2022/02/implantodontia.jpg', to: '/tratamentos/implante' },
-  { num: 2, title: 'Facetas de Resina', desc: 'Dentes perfeitamente alinhados e brancos.', img: 'https://odontologiacipriano.com.br/wp-content/uploads/2022/02/facetas-de-resina.jpg', to: '/tratamentos/facetas' },
-  { num: 3, title: 'Harmonização Orofacial', desc: 'Equilíbrio estético do sorriso e da face.', img: 'https://odontologiacipriano.com.br/wp-content/uploads/2022/02/Harmonizacao-Orafacial-removebg-preview.png', to: '/tratamentos/harmonizacao' },
-  { num: 4, title: 'Lentes de Contato Dental', desc: 'Ultrafinas e naturais. Perfeição estética.', img: 'https://odontologiacipriano.com.br/wp-content/uploads/2022/02/lentes-viotto.jpg', to: '/tratamentos/lentes' },
+  { num: 1, title: 'Implantes Dentários', desc: 'Solução definitiva para dentes perdidos.', img: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=85', to: '/tratamentos/implante' },
+  { num: 2, title: 'Facetas de Resina', desc: 'Dentes perfeitamente alinhados e brancos.', img: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e85?auto=format&fit=crop&w=900&q=85', to: '/tratamentos/facetas' },
+  { num: 3, title: 'Harmonização Orofacial', desc: 'Equilíbrio estético do sorriso e da face.', img: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=85', to: '/tratamentos/harmonizacao' },
+  { num: 4, title: 'Lentes de Contato Dental', desc: 'Ultrafinas e naturais. Perfeição estética.', img: 'https://images.unsplash.com/photo-1598256985030-4fd7dffb9e65?auto=format&fit=crop&w=900&q=85', to: '/tratamentos/lentes' },
 ]
 
 export default function TreatmentPage({ name, label, description, image, fullText, faq, extraContent, relatedIndexes = [0, 1, 2] }) {

@@ -13,14 +13,14 @@ const CREAM = '#F8F5F0'
 const CARD = '#0D1421'
 
 const TREATMENTS = [
-  { n: '01', title: 'Implantes Dentários', desc: 'Solução definitiva para dentes perdidos. Do unitário à reabilitação total.', img: 'https://odontologiacipriano.com.br/wp-content/uploads/2022/02/implantodontia.jpg', to: '/tratamentos/implante' },
-  { n: '02', title: 'Facetas de Resina', desc: 'Dentes perfeitamente alinhados e brancos. Transformação em uma sessão.', img: 'https://odontologiacipriano.com.br/wp-content/uploads/2022/02/facetas-de-resina.jpg', to: '/tratamentos/facetas' },
-  { n: '03', title: 'Harmonização Orofacial', desc: 'Equilíbrio estético do sorriso e da face. Arte e ciência em perfeita harmonia.', img: 'https://odontologiacipriano.com.br/wp-content/uploads/2022/02/Harmonizacao-Orafacial-removebg-preview.png', to: '/tratamentos/harmonizacao' },
-  { n: '04', title: 'Clareamento Dental', desc: 'O sorriso mais branco da sua vida. Tecnologia e segurança sem igual.', img: 'https://odontologiacipriano.com.br/wp-content/uploads/2022/02/100615tecnicasclareamento-1024x1024.jpg', to: '/tratamentos/clareamento' },
-  { n: '05', title: 'Reabilitação Oral', desc: 'Restauração completa da estética e função bucal. Seu novo sorriso começa aqui.', img: 'https://odontologiacipriano.com.br/wp-content/uploads/2022/02/reabilitacao-oral.jpg', to: '/tratamentos/reabilitacao' },
-  { n: '06', title: 'Lentes de Contato Dental', desc: 'Ultrafinas e naturais. A perfeição estética que você sempre sonhou.', img: 'https://odontologiacipriano.com.br/wp-content/uploads/2022/02/lentes-viotto.jpg', to: '/tratamentos/lentes' },
-  { n: '07', title: 'Clínica Geral', desc: 'Prevenção, diagnóstico e cuidado completo para toda a família.', img: 'https://odontologiacipriano.com.br/wp-content/uploads/2022/02/clinico-geral.jpg', to: '/tratamentos/clinica-geral' },
-  { n: '08', title: 'Harmonização Facial', desc: '8 procedimentos estéticos para rejuvenescer, harmonizar e realçar sua beleza.', img: null, to: '/tratamentos/harmonizacao' },
+  { n: '01', title: 'Implantes Dentários', desc: 'Solução definitiva para dentes perdidos. Do unitário à reabilitação total.', img: 'https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=85', to: '/tratamentos/implante' },
+  { n: '02', title: 'Facetas de Resina', desc: 'Dentes perfeitamente alinhados e brancos. Transformação em uma sessão.', img: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e85?auto=format&fit=crop&w=900&q=85', to: '/tratamentos/facetas' },
+  { n: '03', title: 'Harmonização Orofacial', desc: 'Equilíbrio estético do sorriso e da face. Arte e ciência em perfeita harmonia.', img: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=900&q=85', to: '/tratamentos/harmonizacao' },
+  { n: '04', title: 'Clareamento Dental', desc: 'O sorriso mais branco da sua vida. Tecnologia e segurança sem igual.', img: 'https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=900&q=85', to: '/tratamentos/clareamento' },
+  { n: '05', title: 'Reabilitação Oral', desc: 'Restauração completa da estética e função bucal. Seu novo sorriso começa aqui.', img: 'https://images.unsplash.com/photo-1588776814546-1ffbb172d4bc?auto=format&fit=crop&w=900&q=85', to: '/tratamentos/reabilitacao' },
+  { n: '06', title: 'Lentes de Contato Dental', desc: 'Ultrafinas e naturais. A perfeição estética que você sempre sonhou.', img: 'https://images.unsplash.com/photo-1598256985030-4fd7dffb9e65?auto=format&fit=crop&w=900&q=85', to: '/tratamentos/lentes' },
+  { n: '07', title: 'Clínica Geral', desc: 'Prevenção, diagnóstico e cuidado completo para toda a família.', img: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=85', to: '/tratamentos/clinica-geral' },
+  { n: '08', title: 'Harmonização Facial', desc: '8 procedimentos estéticos para rejuvenescer, harmonizar e realçar sua beleza.', img: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=85', to: '/tratamentos/harmonizacao' },
 ]
 
 const STATS = [
@@ -451,7 +451,7 @@ export default function Home() {
                 boxShadow: '0 24px 64px rgba(0,0,0,0.2)',
                 border: '6px solid #fff',
               }}>
-                <img src="https://odontologiacipriano.com.br/wp-content/uploads/2022/02/reabilitacao-oral.jpg"
+                <img src="https://images.unsplash.com/photo-1588776814546-1ffbb172d4bc?auto=format&fit=crop&w=900&q=85"
                   crossOrigin="anonymous" alt="Reabilitação"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               </div>
@@ -462,7 +462,7 @@ export default function Home() {
                 boxShadow: '0 24px 64px rgba(0,0,0,0.25)',
                 border: '6px solid #fff',
               }}>
-                <img src="https://odontologiacipriano.com.br/wp-content/uploads/2022/02/facetas-de-resina.jpg"
+                <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e85?auto=format&fit=crop&w=900&q=85"
                   crossOrigin="anonymous" alt="Facetas"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               </div>
@@ -474,7 +474,7 @@ export default function Home() {
                 boxShadow: '0 24px 64px rgba(0,0,0,0.2)',
                 border: '6px solid #fff',
               }}>
-                <img src="https://odontologiacipriano.com.br/wp-content/uploads/2022/02/lentes-viotto.jpg"
+                <img src="https://images.unsplash.com/photo-1598256985030-4fd7dffb9e65?auto=format&fit=crop&w=900&q=85"
                   crossOrigin="anonymous" alt="Lentes"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               </div>

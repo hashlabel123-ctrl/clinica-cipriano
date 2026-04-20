@@ -6,7 +6,7 @@ export default function Clareamento() {
       name="Clareamento Dental"
       label="ESTÉTICA DENTAL"
       description="O sorriso mais branco da sua vida. Tecnologia LED de última geração com resultados em uma única sessão."
-      image="https://odontologiacipriano.com.br/wp-content/uploads/2022/02/100615tecnicasclareamento-1024x1024.jpg"
+      image="https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?auto=format&fit=crop&w=900&q=85"
       fullText={[
         'O clareamento dental é um dos procedimentos estéticos mais buscados e eficazes da odontologia moderna. Na Clínica Cipriano, oferecemos clareamento de consultório com tecnologia LED de alta potência, que potencializa a ação do gel clareador e reduz drasticamente o tempo de tratamento.',
         'Realizamos também o clareamento caseiro supervisionado, com moldeiras personalizadas e géis de concentração adequada para cada paciente, garantindo segurança e resultados duradouros.',

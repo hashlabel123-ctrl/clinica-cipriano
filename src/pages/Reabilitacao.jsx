@@ -6,7 +6,7 @@ export default function Reabilitacao() {
       name="Reabilitação Oral"
       label="REABILITAÇÃO"
       description="Restauração completa da estética e função bucal com planejamento digital e materiais de excelência."
-      image="https://odontologiacipriano.com.br/wp-content/uploads/2022/02/reabilitacao-oral.jpg"
+      image="https://images.unsplash.com/photo-1588776814546-1ffbb172d4bc?auto=format&fit=crop&w=900&q=85"
       fullText={[
         'A reabilitação oral é o conjunto de procedimentos que tem como objetivo restaurar a função mastigatória, a estética e a saúde bucal em sua totalidade. É indicada para pacientes com perda de múltiplos dentes, desgaste severo, má oclusão ou problemas funcionais complexos.',
         'Na Clínica Cipriano, o planejamento de reabilitação é feito com tecnologia digital — utilizamos modelos 3D, análise facial e planejamento virtual para que o paciente visualize o resultado antes mesmo de começar o tratamento.',

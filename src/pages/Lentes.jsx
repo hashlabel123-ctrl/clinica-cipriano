@@ -6,7 +6,7 @@ export default function Lentes() {
       name="Lentes de Contato Dental"
       label="ESTÉTICA DENTAL"
       description="Ultrafinas e naturais. A perfeição estética que transforma sorrisos com o mínimo de desgaste dental."
-      image="https://odontologiacipriano.com.br/wp-content/uploads/2022/02/lentes-viotto.jpg"
+      image="https://images.unsplash.com/photo-1598256985030-4fd7dffb9e65?auto=format&fit=crop&w=900&q=85"
       fullText={[
         'As lentes de contato dental são lâminas de porcelana de alta resistência com espessura inferior a 0,3mm, aplicadas sobre a face frontal dos dentes. São a opção mais conservadora e esteticamente refinada para transformação do sorriso.',
         'Permitem corrigir cor, forma, tamanho e pequenos desalinhamentos sem a necessidade de desgaste dental significativo — em muitos casos, nenhum desgaste é necessário (técnica no-prep). O resultado é um sorriso absolutamente natural, sofisticado e personalizado.',

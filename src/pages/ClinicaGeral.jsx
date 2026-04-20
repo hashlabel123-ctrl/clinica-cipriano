@@ -6,7 +6,7 @@ export default function ClinicaGeral() {
       name="Clínica Geral"
       label="SAÚDE BUCAL"
       description="Prevenção, diagnóstico e cuidado completo para toda a família. A base de uma saúde bucal duradoura."
-      image="https://odontologiacipriano.com.br/wp-content/uploads/2022/02/clinico-geral.jpg"
+      image="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=85"
       fullText={[
         'A clínica geral é a base de toda odontologia de excelência. Na Clínica Cipriano, o atendimento clínico geral vai muito além da consulta de rotina — realizamos diagnósticos precisos, tratamentos preventivos e restauradores com os mais altos padrões de qualidade.',
         'Oferecemos consultas de avaliação, radiografias digitais, limpeza e profilaxia, tratamento de cáries, extrações, tratamento de canal (endodontia), periodontia e muito mais — tudo em um ambiente acolhedor e com equipe altamente qualificada.',
