@@ -9,15 +9,15 @@ const TREATMENTS = [
   { label: 'Harmonização Orofacial', to: '/tratamentos/harmonizacao' },
   { label: 'Clareamento Dental', to: '/tratamentos/clareamento' },
   { label: 'Reabilitação Oral', to: '/tratamentos/reabilitacao' },
-  { label: 'Lentes de Contato Dental', to: '/tratamentos/lentes' },
+  { label: 'Lentes de Contato', to: '/tratamentos/lentes' },
   { label: 'Clínica Geral', to: '/tratamentos/clinica-geral' },
   { label: 'Harmonização Facial', to: '/tratamentos/harmonizacao' },
 ]
 
-const NAV_LINKS = [
+const NAV = [
   { label: 'Início', to: '/' },
   { label: 'Sobre', to: '/sobre' },
-  { label: 'Tratamentos', to: '/tratamentos', hasDropdown: true },
+  { label: 'Tratamentos', to: '/tratamentos', dropdown: true },
   { label: 'Unidades', to: '/unidades' },
   { label: 'Contato', to: '/contato' },
 ]
@@ -29,116 +29,110 @@ export default function Navbar() {
   const location = useLocation()
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 30)
-    window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
+    const fn = () => setScrolled(window.scrollY > 40)
+    window.addEventListener('scroll', fn, { passive: true })
+    return () => window.removeEventListener('scroll', fn)
   }, [])
 
-  useEffect(() => { setMobile(false) }, [location])
+  useEffect(() => setMobile(false), [location])
 
   return (
     <>
-      {/* Top bar */}
-      <div
-        className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center py-2 px-6"
-        style={{ background: 'rgba(8,12,20,0.9)', borderBottom: '1px solid rgba(200,169,110,0.1)' }}
-      >
-        <div className="flex items-center gap-6">
-          <span style={{ fontFamily: 'Outfit', fontWeight: 300, fontSize: 11, color: '#C8A96E', letterSpacing: '0.2em' }}>
-            RJ · SP
-          </span>
-          <span style={{ color: 'rgba(200,169,110,0.3)', fontSize: 10 }}>·</span>
-          <a
-            href="mailto:ciprianoodontologia@gmail.com"
-            className="flex items-center gap-1.5 hover:opacity-80 transition-opacity"
-            style={{ fontFamily: 'Outfit', fontWeight: 300, fontSize: 11, color: '#9A8A72', textDecoration: 'none', letterSpacing: '0.05em' }}
-          >
-            <Mail size={10} color="#C8A96E" />
-            ciprianoodontologia@gmail.com
-          </a>
-        </div>
+      {/* Top strip */}
+      <div style={{
+        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+        padding: '8px 24px', gap: 20,
+        background: 'rgba(4,6,11,0.95)',
+        borderBottom: '1px solid rgba(200,169,110,0.08)',
+      }}>
+        <span style={{ fontFamily: 'Outfit', fontWeight: 300, fontSize: 10, color: '#C8A96E', letterSpacing: '0.3em' }}>
+          RJ · SP
+        </span>
+        <span style={{ color: 'rgba(200,169,110,0.2)', fontSize: 10 }}>|</span>
+        <a href="mailto:ciprianoodontologia@gmail.com" style={{
+          display: 'flex', alignItems: 'center', gap: 6,
+          fontFamily: 'Outfit', fontWeight: 300, fontSize: 10,
+          color: '#9A8A72', textDecoration: 'none', letterSpacing: '0.05em',
+        }}>
+          <Mail size={9} color="#C8A96E" />
+          ciprianoodontologia@gmail.com
+        </a>
       </div>
 
-      {/* Main navbar */}
-      <nav
-        className="fixed left-0 right-0 z-40 flex items-center justify-between px-8 lg:px-16 transition-all duration-300"
-        style={{
-          top: 32,
-          height: 72,
-          background: scrolled ? 'rgba(8,12,20,0.95)' : 'transparent',
-          backdropFilter: scrolled ? 'blur(20px)' : 'none',
-          borderBottom: scrolled ? '1px solid rgba(200,169,110,0.12)' : 'none',
-        }}
-      >
+      {/* Main nav */}
+      <nav style={{
+        position: 'fixed', top: 32, left: 0, right: 0, zIndex: 99,
+        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+        padding: '0 64px',
+        height: 72,
+        transition: 'background 0.4s ease, border-color 0.4s ease',
+        background: scrolled ? 'rgba(8,12,20,0.96)' : 'transparent',
+        backdropFilter: scrolled ? 'blur(20px)' : 'none',
+        borderBottom: scrolled ? '1px solid rgba(200,169,110,0.1)' : '1px solid transparent',
+      }}>
         {/* Logo */}
-        <Link to="/" style={{ textDecoration: 'none' }}>
-          <div className="flex flex-col items-start">
-            <span style={{ fontFamily: 'Cormorant Garamond', fontWeight: 600, fontSize: 22, color: '#C8A96E', letterSpacing: '0.2em' }}>
-              CIPRIANO
-            </span>
-            <div style={{ height: 1, background: '#C8A96E', width: '100%', marginTop: 2, opacity: 0.6 }} />
-            <span style={{ fontFamily: 'Outfit', fontWeight: 200, fontSize: 9, color: '#9A8A72', letterSpacing: '0.2em', marginTop: 3 }}>
-              ODONTOLOGIA & ESTÉTICA
-            </span>
-          </div>
+        <Link to="/" style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column', gap: 3 }}>
+          <span style={{ fontFamily: 'Cormorant Garamond', fontWeight: 600, fontSize: 20, color: '#C8A96E', letterSpacing: '0.25em' }}>
+            CIPRIANO
+          </span>
+          <div style={{ height: 1, background: 'linear-gradient(to right, #C8A96E, transparent)', opacity: 0.7 }} />
+          <span style={{ fontFamily: 'Outfit', fontWeight: 200, fontSize: 8, color: '#9A8A72', letterSpacing: '0.22em' }}>
+            ODONTOLOGIA & ESTÉTICA
+          </span>
         </Link>
 
         {/* Desktop links */}
-        <div className="hidden lg:flex items-center gap-8">
-          {NAV_LINKS.map(link => (
+        <div style={{ display: 'flex', alignItems: 'center', gap: 40 }} className="hidden lg:flex">
+          {NAV.map(link => (
             <div
               key={link.to}
-              className="relative"
-              onMouseEnter={() => link.hasDropdown && setDropdown(true)}
-              onMouseLeave={() => link.hasDropdown && setDropdown(false)}
+              style={{ position: 'relative' }}
+              onMouseEnter={() => link.dropdown && setDropdown(true)}
+              onMouseLeave={() => link.dropdown && setDropdown(false)}
             >
               <Link
                 to={link.to}
-                style={{
-                  fontFamily: 'Outfit',
-                  fontWeight: 300,
-                  fontSize: 13,
-                  letterSpacing: '0.15em',
-                  color: location.pathname === link.to ? '#C8A96E' : '#EDE8E0',
-                  textDecoration: 'none',
-                  transition: 'color 0.2s',
-                }}
-                onMouseEnter={e => { if (location.pathname !== link.to) e.currentTarget.style.color = '#C8A96E' }}
-                onMouseLeave={e => { if (location.pathname !== link.to) e.currentTarget.style.color = '#EDE8E0' }}
+                className={`nav-link ${location.pathname === link.to || (link.dropdown && location.pathname.startsWith('/tratamentos')) ? 'active' : ''}`}
               >
-                {link.label.toUpperCase()}
+                {link.label}
               </Link>
 
-              {/* Treatments Dropdown */}
               <AnimatePresence>
-                {link.hasDropdown && dropdown && (
+                {link.dropdown && dropdown && (
                   <motion.div
-                    initial={{ opacity: 0, y: 10 }}
+                    initial={{ opacity: 0, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-8 left-0 p-6 rounded-sm"
+                    exit={{ opacity: 0, y: 12 }}
+                    transition={{ duration: 0.22, ease: 'easeOut' }}
                     style={{
-                      background: 'rgba(8,12,20,0.98)',
+                      position: 'absolute', top: 28, left: -16,
+                      background: 'rgba(6,9,16,0.98)',
                       border: '1px solid rgba(200,169,110,0.2)',
-                      backdropFilter: 'blur(20px)',
-                      minWidth: 480,
-                      display: 'grid',
-                      gridTemplateColumns: '1fr 1fr',
-                      gap: 4,
+                      backdropFilter: 'blur(24px)',
+                      padding: '8px 0',
+                      minWidth: 260,
+                      boxShadow: '0 32px 80px rgba(0,0,0,0.6)',
                     }}
                   >
-                    {TREATMENTS.map(t => (
+                    {TREATMENTS.map((t, i) => (
                       <Link
-                        key={t.to + t.label}
+                        key={i}
                         to={t.to}
-                        className="px-4 py-3 flex items-center gap-3 group rounded-sm transition-colors"
                         style={{ textDecoration: 'none' }}
-                        onMouseEnter={e => e.currentTarget.style.background = 'rgba(200,169,110,0.08)'}
-                        onMouseLeave={e => e.currentTarget.style.background = 'transparent'}
                       >
-                        <div style={{ width: 4, height: 4, borderRadius: '50%', background: '#C8A96E', opacity: 0.5 }} />
-                        <span style={{ fontFamily: 'DM Sans', fontSize: 13, color: '#EDE8E0' }}>{t.label}</span>
+                        <div style={{
+                          padding: '10px 24px',
+                          fontFamily: 'DM Sans', fontSize: 13, color: '#9A8A72',
+                          display: 'flex', alignItems: 'center', gap: 10,
+                          transition: 'color 0.2s, background 0.2s',
+                        }}
+                          onMouseEnter={e => { e.currentTarget.style.color = '#EDE8E0'; e.currentTarget.style.background = 'rgba(200,169,110,0.06)' }}
+                          onMouseLeave={e => { e.currentTarget.style.color = '#9A8A72'; e.currentTarget.style.background = 'transparent' }}
+                        >
+                          <span style={{ width: 3, height: 3, borderRadius: '50%', background: '#C8A96E', flexShrink: 0 }} />
+                          {t.label}
+                        </div>
                       </Link>
                     ))}
                   </motion.div>
@@ -148,44 +142,37 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* CTA Button */}
-        <a
-          href="https://wa.me/5521973623797"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden lg:block px-6 py-3 text-xs transition-all duration-300"
-          style={{
-            fontFamily: 'Outfit', fontWeight: 400, letterSpacing: '0.15em',
-            border: '1px solid #C8A96E', color: '#C8A96E', textDecoration: 'none',
-          }}
-          onMouseEnter={e => { e.currentTarget.style.background = '#C8A96E'; e.currentTarget.style.color = '#080C14' }}
-          onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.color = '#C8A96E' }}
-        >
-          AGENDAR CONSULTA
-        </a>
+        {/* CTA + hamburger */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 20 }}>
+          <a
+            href="https://wa.me/5521973623797"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-outline hidden lg:inline-block"
+            style={{ padding: '10px 24px', fontSize: 10 }}
+          >
+            Agendar Consulta
+          </a>
 
-        {/* Hamburger */}
-        <button
-          onClick={() => setMobile(o => !o)}
-          className="lg:hidden flex flex-col gap-1.5 p-2"
-          aria-label="Menu"
-        >
-          <motion.span
-            animate={mobile ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
-            className="block w-6 h-px"
-            style={{ background: '#C8A96E' }}
-          />
-          <motion.span
-            animate={mobile ? { opacity: 0 } : { opacity: 1 }}
-            className="block w-6 h-px"
-            style={{ background: '#C8A96E' }}
-          />
-          <motion.span
-            animate={mobile ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
-            className="block w-6 h-px"
-            style={{ background: '#C8A96E' }}
-          />
-        </button>
+          <button
+            onClick={() => setMobile(o => !o)}
+            className="lg:hidden"
+            style={{ background: 'none', border: 'none', padding: 8, display: 'flex', flexDirection: 'column', gap: 5 }}
+          >
+            {[0, 1, 2].map(i => (
+              <motion.span
+                key={i}
+                animate={mobile
+                  ? i === 0 ? { rotate: 45, y: 10 }
+                    : i === 1 ? { opacity: 0 }
+                    : { rotate: -45, y: -10 }
+                  : { rotate: 0, y: 0, opacity: 1 }
+                }
+                style={{ display: 'block', width: 22, height: 1, background: '#C8A96E' }}
+              />
+            ))}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile overlay */}
@@ -196,24 +183,25 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-30 flex flex-col items-center justify-center gap-8"
-            style={{ background: 'rgba(8,12,20,0.98)' }}
+            style={{
+              position: 'fixed', inset: 0, zIndex: 98,
+              background: 'rgba(4,6,11,0.98)',
+              display: 'flex', flexDirection: 'column',
+              alignItems: 'center', justifyContent: 'center', gap: 36,
+            }}
           >
-            {NAV_LINKS.map((link, i) => (
+            {NAV.map((link, i) => (
               <motion.div
                 key={link.to}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 24 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.07 }}
+                transition={{ delay: i * 0.08, duration: 0.4 }}
               >
                 <Link
                   to={link.to}
                   style={{
-                    fontFamily: 'Cormorant Garamond',
-                    fontStyle: 'italic',
-                    fontSize: 36,
-                    color: '#EDE8E0',
-                    textDecoration: 'none',
+                    fontFamily: 'Cormorant Garamond', fontStyle: 'italic',
+                    fontSize: 40, color: '#EDE8E0', textDecoration: 'none',
                   }}
                 >
                   {link.label}
@@ -221,17 +209,15 @@ export default function Navbar() {
               </motion.div>
             ))}
             <motion.a
-              initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.45 }}
               href="https://wa.me/5521973623797"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 mt-4"
-              style={{
-                fontFamily: 'Outfit', fontSize: 12, letterSpacing: '0.15em',
-                border: '1px solid #C8A96E', color: '#C8A96E', textDecoration: 'none',
-              }}
+              className="btn-outline"
             >
-              AGENDAR CONSULTA
+              Agendar Consulta
             </motion.a>
           </motion.div>
         )}
